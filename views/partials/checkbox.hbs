@@ -1,0 +1,10 @@
+<tr>
+    {{#if @last}}
+        <td>4x4 Drive:</td>
+    {{else}}
+        <td>{{name}}:</td>  
+    {{/if}}
+    <td>
+        <input class="checkbox" type="checkbox" name={{name}} id={{name}} {{#if checked}}checked{{/if}}>
+    </td>
+</tr>

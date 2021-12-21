@@ -1,0 +1,47 @@
+<tr>
+    {{#if (notEdited @index)}}
+    <form action="/deleteForm" method="GET">
+        <input type="hidden" name="id" value={{"_id"}}>
+        <td>{{@index}}</td>
+        <td>{{display Insured}}</td>
+        <td>{{display Fuel}}</td>
+        <td>{{display Damaged}}</td>
+        <td>{{display Drive}}</td>
+        <td><input value="Delete" type="submit"></td>
+    </form>
+    <form action="/enableEdit" method="GET">
+        <input type="hidden" name="index" value={{@index}}>
+        <td><input value="Edit" type="submit"></td>
+    </form>
+    {{else}}
+    <form action="/editForm" method="GET">
+        <input type="hidden" name="id" value={{"_id"}}>
+        <td>{{@index}}</td>
+        <td><select name="Insured">
+                <option value="YES">YES</option>
+                <option value="NO">NO</option>
+                <option value="NO DATA">NO DATA</option>
+            </select></td>
+        <td><select name="Fuel">
+                <option value="YES">YES</option>
+                <option value="NO">NO</option>
+                <option value="NO DATA">NO DATA</option>
+            </select></td>
+        <td><select name="Damaged">
+                <option value="YES" {{#if "Damaged" }} selected {{/if}}>YES</option>
+                <option value="NO">NO</option>
+                <option value="NO DATA">NO DATA</option>
+            </select></td>
+        <td><select name="Drive">
+                <option value="YES">YES</option>
+                <option value="NO">NO</option>
+                <option value="NO DATA">NO DATA</option>
+            </select></td>
+        <td><input value="Confirm" type="submit"></td>
+    </form>
+    <form action="/cancelEdit" method="GET">
+        <td><input value="Cancel" type="submit"></td>
+    </form>
+
+    {{/if}}
+</tr>

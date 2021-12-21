@@ -1,0 +1,32 @@
+<h2>Reading and saving data with a NEDB database</h2>
+
+<table>
+    <tr>
+        <td>
+            {{> addtodb}}
+        </td>
+
+        <td>
+            <h3>Vehicle Data:</h3>
+            <table class="display-table">
+                <tr>
+                    <th></th>
+                    {{#each inputs}}
+
+                    {{#if @last}}
+                    <th>4x4 Drive</th>
+                    {{else}}
+                    <th>{{name}}</th>
+                    {{/if}}
+
+                    {{/each}}
+                    <th></th>
+                    <th></th>
+                </tr>
+                    {{#each data}}
+                    {{> display}}
+                    {{/each}}
+            </table>
+        </td>
+    </tr>
+</table>

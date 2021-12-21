@@ -1,0 +1,38 @@
+h2 {
+    color: blue;
+    font-size: 2em;
+    margin: 10px;
+}
+
+h3 {
+    color: lightgray;
+    font-size: 1.6em;
+    text-decoration: underline;
+    margin: 10px;
+}
+
+.form-table th, .form-table td{
+    color: blue;
+    font-size: 24px;
+    border: 1px solid black;
+}
+
+.checkbox{
+    margin: 18px;
+    transform: scale(2);
+}
+
+.add-input{
+    border-radius: 10px;
+    border: 1px solid blue;
+    background-color: lightskyblue;
+    font-size: 24px;
+    margin: 10px;
+}
+
+.display-table th, .display-table td{
+    font-size: 24px;
+    border: 1px solid black;
+}
+
+

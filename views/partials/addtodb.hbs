@@ -1,0 +1,9 @@
+<form action="/addToDb" method="GET">
+    <h3>Vehicle Data:</h3>
+    <table class="form-table">
+        {{#each inputs}}
+        {{> checkbox}}
+        {{/each}}
+    </table>
+    <input type="submit" name="add" class="add-input" text="ADD TO DATABASE">
+</form>
