@@ -34,6 +34,10 @@ app.engine('hbs', hbs({
     }
 }));
 
+app.listen(PORT, function () {
+    console.log("start serwera na porcie " + PORT)
+})
+
 const Datastore = require('nedb')
 
 const coll1 = new Datastore({
