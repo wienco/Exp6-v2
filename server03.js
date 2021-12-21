@@ -1,6 +1,6 @@
 var express = require("express")
 var app = express()
-const PORT = 3000;
+const PORT = process.env.port || 3000;
 var hbs = require('express-handlebars');
 path = require("path")
 app.use(express.static('static'))
@@ -33,10 +33,6 @@ app.engine('hbs', hbs({
         },
     }
 }));
-
-app.listen(PORT, function () {
-    console.log("start serwera na porcie " + PORT)
-})
 
 const Datastore = require('nedb')
 
@@ -117,7 +113,7 @@ app.get("/editForm", function (req, res) {
     var creator = {}
     context.inputs.forEach(e => {
         let n = e.name
-        if(e.name == "4x4\u0020Drive"){
+        if(e.name == "4x4\u0020Drive"){ 
             n = "Drive"
         }
         console.log(req.query[n])
