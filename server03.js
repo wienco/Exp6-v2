@@ -1,6 +1,6 @@
 var express = require("express")
 var app = express()
-const PORT = process.env.port || 3000;
+const PORT = parseInt(process.env.PORT) || 3000;
 var hbs = require('express-handlebars');
 path = require("path")
 app.use(express.static('static'))
